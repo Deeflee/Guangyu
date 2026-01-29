@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M7MGZR061Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-M7MGZR061Q');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -38,7 +46,7 @@
             <div class="text-2xl font-black tracking-widest text-gold">廣禹工程</div>
             <div class="text-xs text-gray-400">統編：60438115</div>
         </div>
-        <a href="tel:0981989600" class="bg-[#D4AF37] text-black px-4 py-2 rounded-full font-bold hover:scale-105 transition">
+        <a href="tel:0981989600" onclick="gtag('event', 'click_call', {'event_category': 'contact', 'event_label': 'navbar_button'});" class="bg-[#D4AF37] text-black px-4 py-2 rounded-full font-bold hover:scale-105 transition">
             ⚡ 24H 緊急救援
         </a>
     </nav>
@@ -58,7 +66,7 @@
                 <span class="text-gold font-bold">服務範圍：台中市全區皆有服務 (29 行政區)</span>
             </p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="tel:0981989600" class="gold-gradient text-black px-10 py-4 rounded font-black text-lg emergency-pulse shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:scale-105 transition">
+                <a href="tel:0981989600" onclick="gtag('event', 'click_call', {'event_category': 'contact', 'event_label': 'hero_main_button'});" class="gold-gradient text-black px-10 py-4 rounded font-black text-lg emergency-pulse shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:scale-105 transition">
                     撥打 0981-989-600
                 </a>
             </div>
@@ -265,10 +273,10 @@
     </section>
 
     <div class="fixed bottom-0 left-0 right-0 grid grid-cols-2 h-16 z-50 md:hidden">
-        <a href="tel:0981989600" class="bg-red-600 flex items-center justify-center font-bold text-white text-lg emergency-pulse">
+        <a href="tel:0981989600" onclick="gtag('event', 'click_call', {'event_category': 'contact', 'event_label': 'sticky_bottom_button'});" class="bg-red-600 flex items-center justify-center font-bold text-white text-lg emergency-pulse">
             📞 電話急修
         </a>
-        <a href="https://line.me/ti/p/你的LineID" class="bg-[#00B900] flex items-center justify-center font-bold text-white text-lg">
+        <a href="https://line.me/ti/p/你的LineID" onclick="gtag('event', 'click_line', {'event_category': 'contact', 'event_label': 'sticky_bottom_button'});" class="bg-[#00B900] flex items-center justify-center font-bold text-white text-lg">
             💬 LINE 諮詢
         </a>
     </div>
@@ -277,7 +285,7 @@
         <p class="text-2xl font-bold text-gold mb-2">廣禹工程有限公司</p>
         <p class="mb-1">負責人：林大順 | 統一編號：60438115</p>
         <p class="mb-4">地址：<a href="https://www.google.com/maps/search/?api=1&query=台中市大雅區清陽二路97號" target="_blank" class="text-gold hover:underline">428 台中市大雅區清陽二路 97 號 (點擊導航)</a></p>
-        <p class="text-xs text-gray-600">&copy; 2026 廣禹工程. All Rights Reserved.</p>
+        <p class="text-xs text-gray-600">© 2026 廣禹工程. All Rights Reserved.</p>
     </footer>
 
     <script type="application/ld+json">
