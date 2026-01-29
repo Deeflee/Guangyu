@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>廣禹工程有限公司 | 台中 24H 水電緊急救援</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
+        
+        :root {
+            --gold: #D4AF37;
+            --dark: #121212;
+        }
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: var(--dark);
+            color: #e0e0e0;
+            scroll-behavior: smooth;
+        }
+        .gold-text { color: var(--gold); }
+        .gold-bg { background-color: var(--gold); }
+        .gold-border { border-color: var(--gold); }
+        .emergency-pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-red-600 text-white text-center py-2 text-sm font-bold sticky top-0 z-50">
+        <i class="fas fa-exclamation-triangle mr-2"></i> 24H 水電緊急救援：0981-989-600 (林大順師傅)
+    </div>
+
+    <nav class="p-6 flex justify-between items-center bg-black/80 backdrop-blur-md border-b border-gray-800">
+        <div class="text-2xl font-black tracking-tighter gold-text">廣禹工程</div>
+        <div class="hidden md:flex space-x-8 text-sm font-bold">
+            <a href="#services" class="hover:text-[#D4AF37] transition">服務項目</a>
+            <a href="#prices" class="hover:text-[#D4AF37] transition">透明報價</a>
+            <a href="#portfolio" class="hover:text-[#D4AF37] transition">工程實績</a>
+            <a href="#cert" class="hover:text-[#D4AF37] transition">專業證照</a>
+        </div>
+        <a href="tel:0981989600" class="gold-bg text-black px-6 py-2 rounded-full font-bold text-sm">立即通話</a>
+    </nav>
+
+    <section class="relative py-20 px-6 text-center bg-[url('https://images.unsplash.com/photo-1558389186-438424b00a32?q=80&w=2070')] bg-cover bg-center">
+        <div class="absolute inset-0 bg-black/70"></div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h2 class="gold-text tracking-[0.4em] mb-4 text-lg">GUANG YU ENGINEERING</h2>
+            <h1 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+                半夜跳電、漏水、急修？<br>
+                <span class="gold-text">國家級證照師傅，即刻救援。</span>
+            </h1>
+            <p class="text-gray-300 text-lg mb-10">統一編號：60438115 | 負責人：林大順</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="tel:0981989600" class="gold-bg text-black px-12 py-5 rounded-lg font-black text-xl emergency-pulse">一鍵撥打 0981-989-600</a>
+                <a href="#portfolio" class="bg-white/10 backdrop-blur-md border border-gray-500 px-12 py-5 rounded-lg font-bold hover:bg-white/20 transition">查看工程實績</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-16 gold-text">專業服務範疇</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-8 border border-gray-800 rounded-2xl bg-[#1A1A1A] hover:border-[#D4AF37] transition">
+                <i class="fas fa-bolt text-4xl gold-text mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">電力工程</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">室內配線規劃、舊宅電線更新、配電箱優化、跳電查修、燈具/插座安裝。</p>
+            </div>
+            <div class="p-8 border border-gray-800 rounded-2xl bg-[#1A1A1A] hover:border-[#D4AF37] transition">
+                <i class="fas fa-faucet text-4xl gold-text mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">給排水工程</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">水管漏水修繕、加壓馬達安裝、衛浴設備翻新、馬桶安裝、特定瓦斯器具裝修。</p>
+            </div>
+            <div class="p-8 border border-gray-800 rounded-2xl bg-[#1A1A1A] hover:border-[#D4AF37] transition">
+                <i class="fas fa-tools text-4xl gold-text mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">綜合修繕</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">舊宅翻修工程規劃、用電設備檢驗、房屋修繕、專業水電統包。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="prices" class="py-20 bg-[#111] px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4 gold-text">透明報價清單</h2>
+            <p class="text-center text-gray-500 mb-12">拒絕漫天喊價，每一項收費皆公開透明</p>
+            <div class="bg-black rounded-2xl border border-gray-800 overflow-hidden">
+                <table class="w-full text-left">
+                    <thead class="bg-[#D4AF37] text-black">
+                        <tr>
+                            <th class="p-4">維修項目</th>
+                            <th class="p-4">參考起步價</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-800">
+                        <tr><td class="p-4">24H 緊急出工費 (夜間/假日)</td><td class="p-4 font-bold text-red-500">$1,000 起</td></tr>
+                        <tr><td class="p-4 text-gray-400">插座更換/迴路新增</td><td class="p-4">$1,000 - $1,500</td></tr>
+                        <tr><td class="p-4 text-gray-400">水管漏水檢測與維修</td><td class="p-4">$800 起</td></tr>
+                        <tr><td class="p-4 text-gray-400">加壓馬達更換/安裝</td><td class="p-4">$3,500 起</td></tr>
+                        <tr><td class="p-4 font-bold gold-text">室內配線 / 舊宅翻修估價</td><td class="p-4 gold-text font-bold">現場免費估價</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="cert" class="py-20 px-6 max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-16 gold-text">國家級專業認證</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-[#1A1A1A] p-6 rounded-xl border border-gray-800">
+                <i class="fas fa-certificate text-3xl gold-text mb-4"></i>
+                <h4 class="font-bold">室內配線 (乙級)</h4>
+                <p class="text-xs text-gray-500 mt-2">證照號碼：007-0073165</p>
+            </div>
+            <div class="bg-[#1A1A1A] p-6 rounded-xl border border-gray-800">
+                <i class="fas fa-certificate text-3xl gold-text mb-4"></i>
+                <h4 class="font-bold">特定瓦斯器具裝修</h4>
+                <p class="text-xs text-gray-500 mt-2">證照號碼：155-0025610</p>
+            </div>
+            <div class="bg-[#1A1A1A] p-6 rounded-xl border border-gray-800">
+                <i class="fas fa-certificate text-3xl gold-text mb-4"></i>
+                <h4 class="font-bold">用電設備檢驗</h4>
+                <p class="text-xs text-gray-500 mt-2">證照號碼：166-0016840</p>
+            </div>
+            <div class="bg-[#1A1A1A] p-6 rounded-xl border border-gray-800">
+                <i class="fas fa-certificate text-3xl gold-text mb-4"></i>
+                <h4 class="font-bold">室內配線 (丙級)</h4>
+                <p class="text-xs text-gray-500 mt-2">證照號碼：007-0156683</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-black border-t border-gray-900 text-center px-6">
+        <div class="mb-6">
+            <p class="text-xl font-bold gold-text mb-2">廣禹工程有限公司</p>
+            <p class="text-gray-500 text-sm">台中市大雅區清陽二路 97 號</p>
+            <p class="text-gray-500 text-sm">24H 救援電話：0981-989-600</p>
+        </div>
+        <p class="text-xs text-gray-700">&copy; 2026 廣禹工程有限公司. 版權所有.</p>
+    </footer>
+
+    <div class="md:hidden fixed bottom-0 left-0 right-0 grid grid-cols-2 h-16 z-50 border-t border-gray-800">
+        <a href="tel:0981989600" class="bg-red-600 flex items-center justify-center font-bold text-white">
+            <i class="fas fa-phone-alt mr-2"></i> 緊急急修
+        </a>
+        <a href="https://line.me/R/ti/p/@yourid" class="bg-green-600 flex items-center justify-center font-bold text-white">
+            <i class="fab fa-line mr-2"></i> LINE 估價
+        </a>
+    </div>
+
+</body>
+</html>
