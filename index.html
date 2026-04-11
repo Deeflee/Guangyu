@@ -10,11 +10,15 @@
   <link rel="canonical" href="https://deeflee.github.io/Guangyu/">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-M7MGZR061Q"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-M7MGZR061Q');</script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M7MGZR061Q');
+  </script>
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
   <link rel="apple-touch-icon" href="https://deeflee.github.io/Guangyu/111.jpg">
-
   <meta property="og:title" content="台中水電/監視器首選｜廣禹工程 24H緊急救援">
   <meta property="og:description" content="國家乙級證照師傅施工，台中全區24H水電急修、監視系統安裝。報價透明。">
   <meta property="og:image" content="https://deeflee.github.io/Guangyu/111.jpg">
@@ -25,12 +29,9 @@
   <style>
     .gold-gradient { background: linear-gradient(135deg, #D4AF37 0%, #F1D592 50%, #D4AF37 100%); }
     .text-gold { color: #D4AF37; }
+    .border-gold { border-color: #D4AF37; }
     .emergency-pulse { animation: pulse 2s infinite; }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
-      70% { box-shadow: 0 0 0 15px rgba(220, 38, 38, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
-    }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
     body { background-color: #0F0F0F; color: #E0E0E0; font-family: "Microsoft JhengHei", sans-serif; scroll-behavior: smooth; }
   </style>
 
@@ -57,7 +58,7 @@
         "ratingValue": "5.0",
         "reviewCount": "86"
       },
-      "areaServed": ["西屯區", "北屯區", "南區", "大雅區", "潭子區", "豐原區"]
+      "areaServed": ["台中市全區", "西屯區", "北屯區", "南區", "大雅區", "潭子區", "豐原區"]
     },
     {
       "@context": "https://schema.org",
@@ -77,118 +78,226 @@
 
 <body class="pb-24 md:pb-0">
 
-<nav class="p-4 border-b border-gray-800 flex justify-between items-center bg-black/95 sticky top-0 z-50">
-  <div class="flex items-center">
-    <span class="text-3xl mr-2">⚡</span>
-    <div>
-      <div class="text-2xl font-black text-gold">廣禹工程</div>
-      <div class="text-[10px] text-gray-500 tracking-widest">TAICHUNG WATER & ELECTRIC</div>
-    </div>
+<nav class="p-4 border-b border-gray-800 flex justify-between items-center bg-black/95 sticky top-0 z-50 shadow-lg">
+  <div>
+    <div class="text-2xl font-black tracking-widest text-gold">廣禹工程</div>
+    <div class="text-xs text-gray-400">台中水電 | 統編：60438115</div>
   </div>
-  <a href="tel:0981989600" class="bg-red-600 text-white px-6 py-2 rounded-full font-bold hover:bg-red-700 transition hidden md:block">🚨 24H 緊急救援</a>
+  <a href="tel:0981989600" onclick="gtag('event', 'click_call', {'event_category': 'contact', 'event_label': 'navbar_button'});" class="bg-[#D4AF37] text-black px-4 py-2 rounded-full font-bold hover:scale-105 transition">
+    ⚡ 24H 緊急救援
+  </a>
 </nav>
 
 <main>
-  <section class="relative py-24 md:py-40 px-6 text-center bg-zinc-900" 
-           style="background-image: linear-gradient(rgba(15, 15, 15, 0.75), rgba(15, 15, 15, 0.75)), url('111.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-    <div class="relative z-10 max-w-4xl mx-auto">
-      <h1 class="text-4xl md:text-7xl font-extrabold mb-4 text-white leading-tight drop-shadow-2xl">
-        台中 <span class="text-gold">監視器安裝</span> <br class="md:hidden"> & 水電急修
+  <section class="relative py-24 px-6 flex items-center justify-center text-center overflow-hidden h-[80vh] md:h-[70vh]" 
+           style="background-image: linear-gradient(rgba(15, 15, 15, 0.7), rgba(15, 15, 15, 0.7)), url('111.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="relative z-10 max-w-4xl mx-auto mt-10">
+      <h2 class="text-gold text-lg tracking-[0.3em] mb-4 font-bold uppercase">台中水電 · 弱電 · 全年無休</h2>
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight drop-shadow-2xl">
+        台中 <span class="text-gold">監視器安裝</span> <br> & 水電推薦首選
       </h1>
-      <p class="text-xl md:text-2xl mb-10 text-gray-200 font-bold drop-shadow-lg">乙級技術士「林大順」親自服務｜30 分鐘快速救援</p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="tel:0981989600" class="bg-red-600 text-white px-8 py-4 rounded-xl font-black text-xl emergency-pulse shadow-2xl">0981-989-600</a>
-        <a href="https://line.me/R/ti/p/@133wtkix" target="_blank" class="bg-[#00B900] text-white px-8 py-4 rounded-xl font-black text-xl shadow-2xl">LINE 線上估價</a>
+      <p class="text-gray-200 text-lg mb-8 max-w-2xl mx-auto font-medium shadow-black drop-shadow-md">
+        由國家認證乙級技術士親自服務。拒絕漫天喊價，堅持施工品質。<br>
+        <span class="text-gold font-bold">服務範圍：台中市全區皆有服務 (29 行政區)</span>
+      </p>
+      <div class="flex flex-col md:flex-row gap-4 justify-center">
+        <a href="tel:0981989600" onclick="gtag('event', 'click_call', {'event_category': 'contact', 'event_label': 'hero_main_button'});" class="gold-gradient text-black px-10 py-4 rounded font-black text-lg emergency-pulse shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:scale-105 transition">
+          撥打 0981-989-600
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="py-16 px-6 bg-[#111]">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-      
-      <a href="emergency.html" class="block bg-black p-8 rounded-2xl border-l-4 border-l-red-600 border-y border-r border-gray-800 hover:border-gold transition shadow-xl group">
-        <div class="text-4xl mb-4 group-hover:scale-110 transition">🚨</div>
-        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-gold">24H 水電緊急搶修</h3>
-        <p class="text-gray-400 text-sm leading-relaxed mb-4">半夜跳電、漏水不再求助無門。專精台中市區快速到府，報價透明。</p>
-        <span class="text-gold text-sm font-bold">查看急修服務 →</span>
-      </a>
-
-      <a href="renovation.html" class="block bg-black p-8 rounded-2xl border border-gray-800 hover:border-gold transition shadow-xl group">
-        <div class="text-4xl mb-4 group-hover:scale-110 transition">🏠</div>
-        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-gold">老屋翻修水電工程</h3>
-        <p class="text-gray-400 text-sm leading-relaxed mb-4">老宅電力負載升級、管線汰換。堅持使用國家檢驗合格線材，責任施工。</p>
-        <span class="text-gold text-sm font-bold">了解老屋翻修 →</span>
-      </a>
-
-      <a href="factory.html" class="block bg-black p-8 rounded-2xl border border-gray-800 hover:border-gold transition shadow-xl group">
-        <div class="text-4xl mb-4 group-hover:scale-110 transition">🏭</div>
-        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-gold">工廠機電與監視器</h3>
-        <p class="text-gray-400 text-sm leading-relaxed mb-4">廠房高低壓配電、自動化動力線拉設，以及專業遠端監視系統規劃。</p>
-        <span class="text-gold text-sm font-bold">瀏覽廠辦實績 →</span>
-      </a>
-
-    </div>
-  </section>
-
-  <section class="py-16 px-6 bg-[#0A0A0A]">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-gold mb-10">不只是維修，更是安全保證</h2>
-      <div class="bg-zinc-900/40 p-10 rounded-3xl border border-gray-800 text-left relative overflow-hidden shadow-2xl">
-        <div class="absolute top-0 left-0 w-2 h-full gold-gradient"></div>
-        <p class="text-gray-300 italic mb-6 text-xl leading-relaxed">「在廣禹工程，每一根壓條、每一個接點都由我親自把關。要做，就做到最好，這是我的堅持。」</p>
-        <p class="text-gold font-bold text-xl">— 負責人 林大順 (乙級技術士)</p>
+  <section class="py-12 px-6 bg-[#111] border-b border-gray-800">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-gold mb-8">⚡ 廣禹工程三大核心服務</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="renovation.html" class="block bg-black p-6 rounded-xl border border-gray-700 hover:border-gold hover:-translate-y-2 transition duration-300 group shadow-lg">
+          <h3 class="text-xl font-bold text-white mb-3 group-hover:text-gold">🏠 台中老屋翻修水電</h3>
+          <p class="text-gray-400 text-sm">管線全面重拉、電箱升級，徹底解決老屋跳電漏水隱患。</p>
+          <span class="inline-block mt-4 text-gold text-sm font-bold">了解老屋翻修詳情 →</span>
+        </a>
+        <a href="emergency.html" class="block bg-black p-6 rounded-xl border border-gray-700 hover:border-gold hover:-translate-y-2 transition duration-300 group shadow-lg">
+          <h3 class="text-xl font-bold text-white mb-3 group-hover:text-gold">🚨 分區 24H 水電急修</h3>
+          <p class="text-gray-400 text-sm">半夜跳電、水管爆裂快速到府救援，價格透明不亂喊價。</p>
+          <span class="inline-block mt-4 text-gold text-sm font-bold">查看急修服務區域 →</span>
+        </a>
+        <a href="factory.html" class="block bg-black p-6 rounded-xl border border-gray-700 hover:border-gold hover:-translate-y-2 transition duration-300 group shadow-lg">
+          <h3 class="text-xl font-bold text-white mb-3 group-hover:text-gold">🏭 工廠機電與弱電監視</h3>
+          <p class="text-gray-400 text-sm">廠房配電、動力線拉設、專業遠端監視系統規劃。</p>
+          <span class="inline-block mt-4 text-gold text-sm font-bold">瀏覽廠辦實績庫 →</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="py-16 px-6 bg-[#111]">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-      <div class="bg-black p-8 rounded-2xl border border-gray-700 shadow-lg">
-        <h4 class="text-gold font-bold mb-6 flex items-center text-lg"><span class="mr-2">📍</span> 快速到府服務區</h4>
-        <div class="grid grid-cols-2 gap-y-3 text-gray-400 font-medium">
-          <div>• 台中西屯區</div><div>• 台中北屯區</div>
-          <div>• 台中南區</div><div>• 台中南屯區</div>
-          <div>• 台中西區</div><div>• 台中大雅區</div>
+  <section class="py-16 px-6 bg-[#151515]">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gold mb-4">📜 台中水電推薦｜國家級專業認證</h2>
+        <p class="text-gray-400">林老闆親自領軍，持證施工，安全有保障</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="group bg-gray-900 p-3 rounded-lg border border-gray-700 hover:border-gold transition">
+          <img src="1-3.jpg" alt="台中水電行推薦-廣禹工程林大順-國家室內配線乙級技術士證照" class="w-full h-auto rounded shadow-lg" width="420" height="300" loading="lazy">
+          <p class="text-center text-sm font-bold mt-3 text-gold">室內配線 (乙級)</p>
+        </div>
+        <div class="group bg-gray-900 p-3 rounded-lg border border-gray-700 hover:border-gold transition">
+          <img src="1-1.jpg" alt="台中水電維修-用電設備檢驗丙級證照" class="w-full h-auto rounded shadow-lg" width="420" height="300" loading="lazy">
+          <p class="text-center text-sm font-bold mt-3 text-gray-300">用電設備檢驗 (丙級)</p>
+        </div>
+        <div class="group bg-gray-900 p-3 rounded-lg border border-gray-700 hover:border-gold transition">
+          <img src="1-4.jpg" alt="台中水電急修-特定瓦斯器具裝修證照" class="w-full h-auto rounded shadow-lg" width="420" height="300" loading="lazy">
+          <p class="text-center text-sm font-bold mt-3 text-gray-300">特定瓦斯器具裝修</p>
+        </div>
+        <div class="group bg-gray-900 p-3 rounded-lg border border-gray-700 hover:border-gold transition">
+          <img src="1-5.jpg" alt="台中漏水處理-自來水管配管丙級技術士證照" class="w-full h-auto rounded shadow-lg" width="420" height="300" loading="lazy">
+          <p class="text-center text-sm font-bold mt-3 text-gray-300">自來水管配管 (丙級)</p>
         </div>
       </div>
-      <div class="bg-black p-8 rounded-2xl border border-gray-700 shadow-lg">
-        <h4 class="text-gold font-bold mb-6 flex items-center text-lg"><span class="mr-2">💰</span> 報價承諾</h4>
-        <ul class="text-gray-400 space-y-4 font-medium">
-          <li class="flex items-start"><span class="text-gold mr-2">●</span> 施工前必先報價</li>
-          <li class="flex items-start"><span class="text-gold mr-2">●</span> 同意才動工，絕不事後加價</li>
-          <li class="flex items-start"><span class="text-gold mr-2">●</span> 維修享售後保固，專業有擔當</li>
+    </div>
+  </section>
+
+  <section class="py-16 px-6 bg-[#0F0F0F]">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row items-end justify-between mb-8 border-b border-gray-800 pb-4">
+        <div>
+          <h2 class="text-3xl font-bold text-gold flex items-center"><span class="mr-3">⚡</span> 台中水電與弱電整合專家</h2>
+          <p class="text-gray-400 mt-2">從強電配箱到弱電網路、監視系統，提供一站式整合規劃</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="relative group overflow-hidden rounded-xl border border-gray-800">
+          <img src="12.jpg" alt="台中水電維修推薦-配電箱整線與更換無熔絲開關" class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-700" width="800" height="600" loading="lazy">
+          <div class="absolute bottom-0 left-0 right-0 bg-black/80 p-6 border-t border-gold">
+            <h4 class="font-bold text-lg text-gold">高規格主配電規劃</h4>
+            <p class="text-sm text-gray-300">工業級整線標準，安全系數升級</p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl border border-gray-800">
+          <img src="2.jpg" alt="台中弱電工程推薦-監視器安裝與網路佈線" class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-700" width="800" height="600" loading="lazy">
+          <div class="absolute bottom-0 left-0 right-0 bg-black/80 p-6 border-t border-gold">
+            <h4 class="font-bold text-lg text-gold">監視器與網路工程</h4>
+            <p class="text-sm text-gray-300">居家安全監控、網路機櫃整理、弱電線路查修</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-6 bg-[#1A1A1A]">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-gold mb-10 text-center">💡 台中水電施工與空間配置實績</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="rounded-lg overflow-hidden bg-black border border-gray-800 hover:border-gold transition duration-300">
+          <img src="11.jpg" alt="台中商業空間水電工程-連鎖餐飲店面配電實績" class="w-full h-64 object-cover" width="800" height="600" loading="lazy">
+          <div class="p-4"><h3 class="font-bold text-gold">連鎖餐飲店面水電</h3><p class="text-xs text-gray-500 mt-1">招牌燈光與戶外電力配置</p></div>
+        </div>
+        <div class="rounded-lg overflow-hidden bg-black border border-gray-800 hover:border-gold transition duration-300">
+          <img src="13.png" alt="台中商業廚房電力規劃-高功率設備專用迴路" class="w-full h-64 object-cover" width="800" height="600" loading="lazy">
+          <div class="p-4"><h3 class="font-bold text-gold">商業廚房電力規劃</h3><p class="text-xs text-gray-500 mt-1">高功率設備專用迴路配置</p></div>
+        </div>
+        <div class="rounded-lg overflow-hidden bg-black border border-gray-800 hover:border-gold transition duration-300">
+          <img src="3.jpg" alt="台中公共區域感應照明安裝" class="w-full h-64 object-cover" width="800" height="600" loading="lazy">
+          <div class="p-4"><h3 class="font-bold text-gold">公共區域感應照明</h3><p class="text-xs text-gray-500 mt-1">樓梯間自動感應燈具安裝</p></div>
+        </div>
+        <div class="rounded-lg overflow-hidden bg-black border border-gray-800 hover:border-gold transition duration-300">
+          <img src="8.jpg" alt="台中明線壓條美化施工" class="w-full h-64 object-cover" width="800" height="600" loading="lazy">
+          <div class="p-4"><h3 class="font-bold text-gold">明線壓條美化</h3><p class="text-xs text-gray-500 mt-1">轉角處細緻收邊，不破壞裝潢</p></div>
+        </div>
+        <div class="rounded-lg overflow-hidden bg-black border border-gray-800 hover:border-gold transition duration-300">
+          <img src="1.jpg" alt="台中居家插座增設更換" class="w-full h-64 object-cover" width="800" height="600" loading="lazy">
+          <div class="p-4"><h3 class="font-bold text-gold">居家插座增設</h3><p class="text-xs text-gray-500 mt-1">使用合格耐燃材質，安全第一</p></div>
+        </div>
+        <div class="rounded-lg overflow-hidden bg-black border border-gray-800 hover:border-gold transition duration-300">
+          <img src="10.jpg" alt="台中室內間接照明施工" class="w-full h-64 object-cover" width="800" height="600" loading="lazy">
+          <div class="p-4"><h3 class="font-bold text-gold">室內間接照明</h3><p class="text-xs text-gray-500 mt-1">柔和光源配置</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-6 bg-[#0F0F0F] relative">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-4 text-gold">台中水電透明報價，安心修繕</h2>
+      <p class="text-gray-400 text-center mb-10">我們承諾：施工前必先報價，您點頭同意後才動工，絕不事後加價。</p>
+      <div class="overflow-x-auto rounded-xl border border-gray-700 shadow-2xl">
+        <table class="w-full text-left bg-[#1A1A1A]">
+          <thead class="bg-gradient-to-r from-[#D4AF37] to-[#F1D592] text-black">
+            <tr><th class="p-4 whitespace-nowrap">服務項目</th><th class="p-4 whitespace-nowrap">參考價格</th><th class="p-4 min-w-[200px]">服務說明</th></tr>
+          </thead>
+          <tbody class="divide-y divide-gray-700 text-gray-300">
+            <tr class="hover:bg-[#252525]"><td class="p-4 font-bold text-red-400">台中 24H 緊急救援出工</td><td class="p-4 font-bold">$1,000 - $2,500</td><td class="p-4 text-sm text-gray-400">深夜、假日緊急搶修基本出勤費 (視距離與時段調整)</td></tr>
+            <tr class="hover:bg-[#252525]"><td class="p-4 font-bold">漏水 / 爆管檢測</td><td class="p-4 font-bold">$800 起</td><td class="p-4 text-sm text-gray-400">包含基本檢測，如需更換零件材料費另計</td></tr>
+            <tr class="hover:bg-[#252525]"><td class="p-4 font-bold text-gold">監視器 / 網路工程</td><td class="p-4 font-bold text-gold">現場場勘報價</td><td class="p-4 text-sm text-gold">居家/店面監控系統安裝、網路硬體架設、線路整理</td></tr>
+            <tr class="hover:bg-[#252525]"><td class="p-4 font-bold">插座 / 開關更換</td><td class="p-4 font-bold">$200 - $500 / 處</td><td class="p-4 text-sm text-gray-400">基本工資另計，量大可優惠</td></tr>
+            <tr class="hover:bg-[#252525]"><td class="p-4 font-bold">加壓馬達安裝</td><td class="p-4 font-bold">$3,500 起</td><td class="p-4 text-sm text-gray-400">視馬達規格(傳統/變頻)與現場管路難度</td></tr>
+            <tr class="hover:bg-[#252525]"><td class="p-4 font-bold">衛浴設備安裝</td><td class="p-4 font-bold">$1,500 起</td><td class="p-4 text-sm text-gray-400">馬桶、面盆、花灑安裝 (不含設備本體)</td></tr>
+            <tr class="hover:bg-[#252525]"><td class="p-4 font-bold text-gold">全屋配線 / 舊宅翻修</td><td class="p-4 font-bold text-gold">免費現場勘查</td><td class="p-4 text-sm text-gold">林老闆親自到府規劃，提供正式報價單</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-gray-500 mt-4 text-center">* 以上價格為參考行情，最終報價以現場老闆評估實際狀況為準。</p>
+    </div>
+  </section>
+
+  <section class="py-12 px-6 bg-[#151515]">
+    <div class="max-w-5xl mx-auto bg-[#222] rounded-2xl p-8 border-l-8 border-gold">
+      <h3 class="text-2xl font-bold text-white mb-6">💡 台中在地廣禹工程的 5 大安心承諾</h3>
+      <div class="grid md:grid-cols-2 gap-4">
+        <ul class="space-y-4 text-gray-300">
+          <li class="flex items-center"><span class="text-gold mr-2">✓</span> <b>絕不亂加價：</b> 報價透明，經客戶同意才施工。</li>
+          <li class="flex items-center"><span class="text-gold mr-2">✓</span> <b>環境整潔：</b> 完工後簡易清潔，不留垃圾給您。</li>
+          <li class="flex items-center"><span class="text-gold mr-2">✓</span> <b>合格材料：</b> 堅持使用檢驗合格之線材與零件。</li>
+        </ul>
+        <ul class="space-y-4 text-gray-300">
+          <li class="flex items-center"><span class="text-gold mr-2">✓</span> <b>售後保固：</b> 責任施工，維修後有問題絕不推託。</li>
+          <li class="flex items-center"><span class="text-gold mr-2">✓</span> <b>24H 待命：</b> 您的緊急狀況，就是我們的優先任務。</li>
         </ul>
       </div>
     </div>
   </section>
+
+  <section class="py-16 px-6 bg-[#0F0F0F]">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center text-gold mb-10">🤔 台中水電常見問題 Q&A</h2>
+      <div class="space-y-4">
+        <article class="bg-[#1A1A1A] p-6 rounded-lg border border-gray-800">
+          <h3 class="font-bold text-xl text-white mb-2">Q：半夜跳電或漏水，真的可以打電話嗎？</h3>
+          <p class="text-gray-400">A：是的！廣禹工程提供 <strong>台中 24H 緊急救援服務</strong>。無論是凌晨 3 點跳電還是假日爆水管，請直接撥打 0981-989-600，林老闆會盡快安排出勤。</p>
+        </article>
+        <article class="bg-[#1A1A1A] p-6 rounded-lg border border-gray-800">
+          <h3 class="font-bold text-xl text-white mb-2">Q：有做監視器安裝或網路拉線嗎？</h3>
+          <p class="text-gray-400">A：有的！我們提供專業的 <strong>台中弱電工程服務</strong>，包含居家/店面監視器安裝、網路硬體架設、線路整理等。我們使用高品質設備，保障您的網路穩定與居家安全。</p>
+        </article>
+        <article class="bg-[#1A1A1A] p-6 rounded-lg border border-gray-800">
+          <h3 class="font-bold text-xl text-white mb-2">Q：維修的費用大概多少？會亂喊價嗎？</h3>
+          <p class="text-gray-400">A：我們堅持<strong>透明報價</strong>。基本出勤費 $1,000 起（視時段與距離），現場檢測後會先報價，<strong>您同意後才施工</strong>，絕不完工後才坐地起價。</p>
+        </article>
+        <article class="bg-[#1A1A1A] p-6 rounded-lg border border-gray-800">
+          <h3 class="font-bold text-xl text-white mb-2">Q：服務範圍有哪些區域？</h3>
+          <p class="text-gray-400">A：<strong>台中市全區皆有服務！</strong> 包含中區、東區、南區、西區、北區、北屯、西屯、南屯、大雅、潭子等。在地經營，抵達速度最快。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full h-96 bg-[#1A1A1A] border-t border-gray-800">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.426742054238!2d120.64161131500271!3d24.22850008435345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469165b6b6c2d1b%3A0x6b6c2d1b3469165b!2zNDI45Y-w5Lit5biC5aSn6ZuF5Y2A5riF6Zm95LqM6LevOTdomZ8!5e0!3m2!1szh-TW!2stw!4v1709400000000!5m2!1szh-TW!2stw" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="廣禹工程位置圖"></iframe>
+  </section>
 </main>
 
-<footer class="py-12 px-6 text-center bg-black border-t border-gray-900">
-  
-  <div class="flex flex-wrap justify-center gap-6 text-gold mb-8 font-bold">
-    <a href="renovation.html" class="hover:text-white transition">老屋水電翻修</a>
-    <span class="hidden md:inline">|</span>
-    <a href="emergency.html" class="hover:text-white transition">24H分區急修</a>
-    <span class="hidden md:inline">|</span>
-    <a href="factory.html" class="hover:text-white transition">工廠機電配置</a>
-  </div>
-
-  <div class="text-gold font-bold text-2xl mb-4">廣禹工程有限公司</div>
-  <p class="text-gray-500 mb-2 font-medium">地址：<a href="https://maps.google.com/?q=台中市大雅區清陽二路97號" target="_blank" class="hover:underline">台中市大雅區清陽二路97號</a></p>
-  <p class="text-gray-500 mb-8 font-medium">統一編號：60438115</p>
-  <p class="text-[10px] text-gray-800 tracking-widest">© 2026 GUANGYU ENGINEERING. ALL RIGHTS RESERVED.</p>
-</footer>
-
-<div class="fixed bottom-0 left-0 right-0 grid grid-cols-2 h-20 z-50 md:hidden shadow-[0_-5px_30px_rgba(0,0,0,0.9)]">
-  <a href="tel:0981989600" class="bg-red-600 flex flex-col items-center justify-center text-white py-2">
-    <span class="text-xl font-black tracking-widest">📞 電話急修</span>
-    <span class="text-[10px] opacity-90 font-bold uppercase">30min Fast Service</span>
-  </a>
-  <a href="https://line.me/R/ti/p/@133wtkix" class="bg-[#00B900] flex flex-col items-center justify-center text-white py-2 border-l border-white/10">
-    <span class="text-xl font-black tracking-widest">💬 LINE 諮詢</span>
-    <span class="text-[10px] opacity-90 font-bold uppercase">Online Quote</span>
-  </a>
+<div class="fixed bottom-0 left-0 right-0 grid grid-cols-2 h-16 z-50 md:hidden">
+  <a href="tel:0981989600" onclick="gtag('event', 'click_call', {'event_category': 'contact', 'event_label': 'sticky_bottom_button'});" class="bg-red-600 flex items-center justify-center font-bold text-white text-lg emergency-pulse">📞 電話急修</a>
+  <a href="https://line.me/R/ti/p/@133wtkix" onclick="gtag('event', 'click_line', {'event_category': 'contact', 'event_label': 'sticky_bottom_button'});" class="bg-[#00B900] flex items-center justify-center font-bold text-white text-lg">💬 LINE 諮詢</a>
 </div>
+
+<footer class="py-12 text-center border-t border-gray-800 bg-[#0A0A0A] text-gray-400 pb-20 md:pb-12">
+  <p class="text-2xl font-bold text-gold mb-2">廣禹工程有限公司</p>
+  <p class="mb-1">負責人：林大順 | 統一編號：60438115</p>
+  <p class="mb-4">地址：<a href="https://maps.app.goo.gl/YourGoogleMapsLink" target="_blank" class="text-gold hover:underline">428 台中市大雅區清陽二路 97 號 (點擊導航)</a></p>
+  <p class="text-xs text-gray-600">© 2026 廣禹工程. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
