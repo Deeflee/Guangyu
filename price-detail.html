@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>詳細報價清單 | 廣禹工程 - 台中專業水電</title>
+    <title>詳細工程價目表 | 廣禹工程 - 台中專業水電</title>
+    <meta name="description" content="廣禹工程詳細水電維修報價單。包含配管、電路、衛浴安裝、弱電監視器等透明價格參考，施工前必先報價。">
     <style>
         :root {
-            --bg-color: #121212;
-            --card-bg: #1e1e1e;
-            --gold: #fbd369;
-            --text-main: #ffffff;
-            --text-muted: #aaaaaa;
+            --bg-color: #0F0F0F;
+            --card-bg: #1A1A1A;
+            --gold: #D4AF37;
+            --gold-light: #F1D592;
+            --text-main: #E0E0E0;
+            --text-muted: #9CA3AF;
             --border: #333333;
         }
 
@@ -31,13 +33,14 @@
 
         header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         h1 {
             color: var(--gold);
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 10px;
+            font-weight: bold;
         }
 
         .back-btn {
@@ -49,6 +52,7 @@
             border-radius: 4px;
             margin-bottom: 30px;
             transition: 0.3s;
+            font-weight: bold;
         }
 
         .back-btn:hover {
@@ -57,11 +61,12 @@
         }
 
         .section-title {
-            border-left: 4px solid var(--gold);
+            border-left: 5px solid var(--gold);
             padding-left: 15px;
-            margin: 40px 0 20px;
-            font-size: 1.4rem;
-            color: var(--gold);
+            margin: 50px 0 20px;
+            font-size: 1.5rem;
+            color: var(--gold-light);
+            font-weight: bold;
         }
 
         .price-table {
@@ -70,7 +75,8 @@
             background: var(--card-bg);
             border-radius: 8px;
             overflow: hidden;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         .price-table th, .price-table td {
@@ -80,43 +86,48 @@
         }
 
         .price-table th {
-            background-color: #2a2a2a;
-            color: var(--gold);
+            background: linear-gradient(135deg, #D4AF37 0%, #F1D592 100%);
+            color: #000;
             font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .price-table tr:hover {
+            background-color: #252525;
         }
 
         .price-table tr:last-child td {
             border-bottom: none;
         }
 
-        .item-name {
-            width: 40%;
-        }
-
         .item-price {
-            width: 30%;
             color: var(--gold);
-            font-weight: 500;
+            font-weight: bold;
+            white-space: nowrap;
         }
 
         .item-note {
-            width: 30%;
             font-size: 0.9rem;
             color: var(--text-muted);
         }
 
         .footer-note {
-            background: #2a2a2a;
-            padding: 20px;
+            background: var(--card-bg);
+            padding: 25px;
             border-radius: 8px;
             margin-top: 50px;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            border-left: 5px solid var(--gold);
         }
 
         @media (max-width: 600px) {
             .price-table th, .price-table td {
                 padding: 12px 10px;
                 font-size: 0.9rem;
+            }
+            .item-note {
+                display: block;
+                margin-top: 5px;
             }
         }
     </style>
@@ -128,65 +139,163 @@
     
     <header>
         <h1>詳細工程價目參考表</h1>
-        <p>廣禹工程承諾：透明報價，絕不事後加價</p>
+        <p style="color: var(--text-muted);">廣禹工程承諾：現場評估，透明報價，絕不事後加價</p>
     </header>
 
     <h2 class="section-title">基本出勤費</h2>
     <table class="price-table">
         <thead>
-            <tr><th>項目</th><th>參考價格</th><th>備註</th></tr>
+            <tr><th>服務項目</th><th>參考價格</th><th>服務說明</th></tr>
         </thead>
         <tbody>
-            <tr><td>基本出勤費</td><td>$500 - $2,500</td><td>視距離與時段調整 [cite: 1]</td></tr>
-            <tr><td>夜間加價</td><td>總額 +20-50%</td><td>18:00 - 08:00 間服務 [cite: 2]</td></tr>
+            <tr>
+                <td>基本出勤費</td>
+                <td class="item-price">NT$ 500 – 2,500 /次</td>
+                <td class="item-note">依現場距離與狀況評估</td>
+            </tr>
+            <tr>
+                <td>夜間加價</td>
+                <td class="item-price">+ 20% - 50%</td>
+                <td class="item-note">晚上 6 點後到早上 8 點前的服務</td>
+            </tr>
         </tbody>
     </table>
 
-    <h2 class="section-title">給排水配管維修</h2>
+    <h2 class="section-title">（一）配管、水電維修工程</h2>
     <table class="price-table">
         <thead>
-            <tr><th>項目</th><th>參考價格</th><th>說明</th></tr>
+            <tr><th>水管配管項目</th><th>參考價格</th><th>服務說明</th></tr>
         </thead>
         <tbody>
-            <tr><td>重拉冷/熱水管</td><td>$6萬 - $9萬</td><td>依長度與裝潢複雜度 [cite: 5]</td></tr>
-            <tr><td>重拉排水管</td><td>$9,000 - $36,000</td><td>依施工區域大小 [cite: 6]</td></tr>
-            <tr><td>傳統齒輪式加壓馬達</td><td>$4,500 - $6,500</td><td>未含安裝費用 [cite: 8, 12]</td></tr>
-            <tr><td>電子恆壓加壓馬達</td><td>$6,000 - $8,500</td><td>未含安裝費用 [cite: 10]</td></tr>
-            <tr><td>通管維修</td><td>$2,500 起</td><td>嚴重堵塞另計 [cite: 48]</td></tr>
+            <tr>
+                <td>重拉熱水、冷水管</td>
+                <td class="item-price">約 NT$ 6萬 – 9萬</td>
+                <td class="item-note">依照管線長短及是否需要動到裝潢</td>
+            </tr>
+            <tr>
+                <td>重拉排水管</td>
+                <td class="item-price">約 NT$ 9,000 – 36,000</td>
+                <td class="item-note">依照施工區域大小，接至室外費用較高</td>
+            </tr>
         </tbody>
     </table>
 
-    <h2 class="section-title">電路工程價格</h2>
     <table class="price-table">
         <thead>
-            <tr><th>項目</th><th>參考價格</th><th>說明</th></tr>
+            <tr><th>加裝加壓馬達 (未含安裝費)</th><th>參考價格</th><th>服務說明</th></tr>
         </thead>
         <tbody>
-            <tr><td>全屋抽換電線</td><td>$2,500 - $3,500 /坪</td><td>依現場坪數計算 [cite: 31]</td></tr>
-            <tr><td>配電箱加大更換</td><td>$15,000 - $25,000</td><td>含電路整理 [cite: 30]</td></tr>
-            <tr><td>110V 電路安裝</td><td>$2,500 - $3,000 /迴</td><td>新設迴路 [cite: 32]</td></tr>
-            <tr><td>220V 電路安裝</td><td>$3,500 - $5,000 /迴</td><td>冷氣、廚電專用 [cite: 33]</td></tr>
-            <tr><td>插座開關面板更換</td><td>$800 - $1,500 /個</td><td>單個更換參考價 [cite: 39]</td></tr>
+            <tr><td>傳統齒輪式加壓馬達</td><td class="item-price">$4,500 – $6,500 /台</td><td class="item-note">單機器費用</td></tr>
+            <tr><td>鑄鐵抽水馬達</td><td class="item-price">$6,500 – $7,500 /台</td><td class="item-note">單機器費用</td></tr>
+            <tr><td>靜音型抽水馬達</td><td class="item-price">$5,500 – $7,500 /台</td><td class="item-note">單機器費用</td></tr>
+            <tr><td>電子恆壓加壓馬達</td><td class="item-price">$6,000 – $8,500 /台</td><td class="item-note">單機器費用</td></tr>
+            <tr><td>變頻式加壓馬達</td><td class="item-price">$15,000 – $22,000 /台</td><td class="item-note">單機器費用</td></tr>
+            <tr><td>熱水器加壓馬達</td><td class="item-price">$2,500 – $3,500 /台</td><td class="item-note">單機器費用</td></tr>
         </tbody>
     </table>
 
-    <h2 class="section-title">衛浴與燈具安裝</h2>
     <table class="price-table">
         <thead>
-            <tr><th>項目</th><th>參考價格</th><th>說明</th></tr>
+            <tr><th>熱水器安裝項目</th><th>參考價格</th><th>服務說明</th></tr>
         </thead>
         <tbody>
-            <tr><td>燈具安裝</td><td>$500 - $2,500 /盞</td><td>含開孔及基本安裝 [cite: 18]</td></tr>
-            <tr><td>馬桶安裝 (代工)</td><td>$2,000 - $6,000</td><td>不含本體費用 [cite: 25]</td></tr>
-            <tr><td>臉盆 / 浴櫃安裝</td><td>$2,500 - $3,500</td><td>單組安裝參考 [cite: 20]</td></tr>
+            <tr><td>基本安裝費</td><td class="item-price">約 NT$ 1,500 – 3,500</td><td class="item-note">基本工資</td></tr>
+            <tr><td>熱水器移位安裝</td><td class="item-price">平均 NT$ 15,000</td><td class="item-note">視移動距離而定</td></tr>
+            <tr><td>追加管線或閥門耗材</td><td class="item-price">約 NT$ 1,000 – 6,000 不等</td><td class="item-note">依現場實際耗材計算</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-title">（二）燈具 / 衛浴設備安裝</h2>
+    <table class="price-table">
+        <thead>
+            <tr><th>燈具與常規設備安裝</th><th>參考價格</th><th>服務說明</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>燈具安裝</td><td class="item-price">$500 – $2,500 /盞</td><td class="item-note">含開孔及安裝</td></tr>
+            <tr><td>燈泡更換</td><td class="item-price">$300 – $500 /顆</td><td class="item-note">-</td></tr>
+            <tr><td>廁所陽台燈更換</td><td class="item-price">$1,200 – $1,800 /盞</td><td class="item-note">-</td></tr>
+            <tr><td>廁所排風扇更換</td><td class="item-price">$1,300 – $1,500 /組</td><td class="item-note">-</td></tr>
+            <tr><td>龍頭安裝</td><td class="item-price">$1,500 – $2,500 /組</td><td class="item-note">-</td></tr>
+            <tr><td>臉盆安裝</td><td class="item-price">$2,500 – $3,500 /組</td><td class="item-note">-</td></tr>
+            <tr><td>浴櫃安裝</td><td class="item-price">$2,500 – $3,500 /組</td><td class="item-note">-</td></tr>
+            <tr><td>蓮蓬頭更換</td><td class="item-price">$500 – $1,500 /顆</td><td class="item-note">-</td></tr>
+            <tr><td>馬桶水箱零件更換</td><td class="item-price">$800 – $2,500 /組</td><td class="item-note">-</td></tr>
+            <tr><td>三角凡耳水閥更換</td><td class="item-price">$1,500 – $2,500 /迴</td><td class="item-note">-</td></tr>
+            <tr><td>廚房排水管更換</td><td class="item-price">$1,300 – $1,800 /組</td><td class="item-note">-</td></tr>
+            <tr><td>防水插座安裝</td><td class="item-price">NT$ 1,500 – 1,800 /個</td><td class="item-note">-</td></tr>
+        </tbody>
+    </table>
+
+    <table class="price-table">
+        <thead>
+            <tr><th>馬桶安裝相關</th><th>參考價格</th><th>服務說明</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>新馬桶代工安裝費</td><td class="item-price">NT$ 2,000 – 6,000</td><td class="item-note">乾式或濕式</td></tr>
+            <tr><td>舊馬桶拆除費用</td><td class="item-price">約 NT$ 1,500 – 2,500</td><td class="item-note">含清運</td></tr>
+            <tr><td>排水管修整與密封處理</td><td class="item-price">約 NT$ 1,500 – 3,500</td><td class="item-note">-</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-title">（三）電路工程</h2>
+    <table class="price-table">
+        <thead>
+            <tr><th>專用迴路與電箱項目</th><th>參考價格</th><th>服務說明</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>配電箱加大更換 & 電路整理</td><td class="item-price">$15,000 – $25,000 /盤</td><td class="item-note">-</td></tr>
+            <tr><td>全屋抽換電線</td><td class="item-price">$2,500 – $3,500 /坪</td><td class="item-note">-</td></tr>
+            <tr><td>110V 電路安裝</td><td class="item-price">約 NT$ 2,500 – 3,000 /迴</td><td class="item-note">-</td></tr>
+            <tr><td>220V 電路安裝</td><td class="item-price">約 NT$ 3,500 – 5,000 /迴</td><td class="item-note">-</td></tr>
+            <tr><td>迴路增設開關及插座</td><td class="item-price">約 NT$ 1,000 – 1,800 /個</td><td class="item-note">-</td></tr>
+            <tr><td>暗管牆內布線</td><td class="item-price">約 NT$ 4,500 – 6,000 /迴</td><td class="item-note">-</td></tr>
+            <tr><td>安裝配電箱</td><td class="item-price">約 NT$ 15,000 – 25,000</td><td class="item-note">-</td></tr>
+            <tr><td>無熔絲開關更換</td><td class="item-price">$1,200 – $2,500</td><td class="item-note">-</td></tr>
+            <tr><td>插座開關面板更換</td><td class="item-price">$800 – $1,500 /個</td><td class="item-note">-</td></tr>
+            <tr><td>消防偵煙感知器新增或移位</td><td class="item-price">$800 /個</td><td class="item-note">-</td></tr>
+        </tbody>
+    </table>
+
+    <table class="price-table">
+        <thead>
+            <tr><th>新增插座項目</th><th>參考價格</th><th>服務說明</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>拉線新增插座</td><td class="item-price">約 NT$ 2,000 – 3,000 /個</td><td class="item-note">-</td></tr>
+            <tr><td>新增插座（新增迴路）</td><td class="item-price">約 NT$ 2,500 – 4,500 /個</td><td class="item-note">-</td></tr>
+            <tr><td>新增插座（舊迴路拉線）</td><td class="item-price">約 NT$ 2,000 – 3,000 /個</td><td class="item-note">-</td></tr>
+            <tr><td>安裝防水插座</td><td class="item-price">約 NT$ 1,200 – 1,800 /個</td><td class="item-note">-</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-title">（四）給排水配管維修</h2>
+    <table class="price-table">
+        <thead>
+            <tr><th>項目</th><th>參考價格</th><th>服務說明</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>熱水、冷水管配管</td><td class="item-price">$3萬 – 6萬</td><td class="item-note">視管線長度而定</td></tr>
+            <tr><td>排水管配管</td><td class="item-price">$8,500 – $20,000</td><td class="item-note">依管路長度及現場環境難易度</td></tr>
+            <tr><td>管路通管</td><td class="item-price">$2,500 起</td><td class="item-note">依堵塞程度，嚴重堵塞可能達 $5,000 元以上</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-title">（五）弱電 / 網路 / 監視 (連工帶料)</h2>
+    <table class="price-table">
+        <thead>
+            <tr><th>項目</th><th>參考價格</th><th>服務說明</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>新增 Cat.6 網路資訊座</td><td class="item-price">$2,500 /口</td><td class="item-note">含配管 / 穿線 / 資訊面板</td></tr>
+            <tr><td>監視器佈線</td><td class="item-price">$2,800 /點</td><td class="item-note">同軸或網路線，含配管拉線至主機端</td></tr>
         </tbody>
     </table>
 
     <div class="footer-note">
-        <p><strong>注意事項：</strong></p>
-        <ul>
-            <li>以上價格均為參考行情，實際報價以<strong>林老闆親自到府規劃</strong>之正式報價單為準。</li>
-            <li>大型工程（如全屋配線、舊宅翻修）提供免費現場勘查與規劃建議。</li>
+        <p><strong>⚠️ 注意事項：</strong></p>
+        <ul style="color: var(--text-muted); padding-left: 20px;">
+            <li>以上價格均為參考行情，實際報價以現場評估之正式報價單為準。</li>
+            <li>大型工程提供免費現場勘查與規劃建議。</li>
             <li>所有施工作業均符合國家乙級配線、丙級室內配管專業證照標準。</li>
         </ul>
     </div>
