@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>詳細報價清單 | 廣禹工程 - 台中專業水電</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --gold: #fbd369;
+            --text-main: #ffffff;
+            --text-muted: #aaaaaa;
+            --border: #333333;
+        }
+
+        body {
+            font-family: "Microsoft JhengHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            color: var(--gold);
+            text-decoration: none;
+            border: 1px solid var(--gold);
+            padding: 8px 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: var(--gold);
+            color: #000;
+        }
+
+        .section-title {
+            border-left: 4px solid var(--gold);
+            padding-left: 15px;
+            margin: 40px 0 20px;
+            font-size: 1.4rem;
+            color: var(--gold);
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .price-table th, .price-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .price-table th {
+            background-color: #2a2a2a;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .item-name {
+            width: 40%;
+        }
+
+        .item-price {
+            width: 30%;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .item-note {
+            width: 30%;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .footer-note {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 50px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .price-table th, .price-table td {
+                padding: 12px 10px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="index.html" class="back-btn">← 回到首頁</a>
+    
+    <header>
+        <h1>詳細工程價目參考表</h1>
+        <p>廣禹工程承諾：透明報價，絕不事後加價</p>
+    </header>
+
+    <h2 class="section-title">基本出勤費</h2>
+    <table class="price-table">
+        <thead>
+            <tr><th>項目</th><th>參考價格</th><th>備註</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>基本出勤費</td><td>$500 - $2,500</td><td>視距離與時段調整 [cite: 1]</td></tr>
+            <tr><td>夜間加價</td><td>總額 +20-50%</td><td>18:00 - 08:00 間服務 [cite: 2]</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-title">給排水配管維修</h2>
+    <table class="price-table">
+        <thead>
+            <tr><th>項目</th><th>參考價格</th><th>說明</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>重拉冷/熱水管</td><td>$6萬 - $9萬</td><td>依長度與裝潢複雜度 [cite: 5]</td></tr>
+            <tr><td>重拉排水管</td><td>$9,000 - $36,000</td><td>依施工區域大小 [cite: 6]</td></tr>
+            <tr><td>傳統齒輪式加壓馬達</td><td>$4,500 - $6,500</td><td>未含安裝費用 [cite: 8, 12]</td></tr>
+            <tr><td>電子恆壓加壓馬達</td><td>$6,000 - $8,500</td><td>未含安裝費用 [cite: 10]</td></tr>
+            <tr><td>通管維修</td><td>$2,500 起</td><td>嚴重堵塞另計 [cite: 48]</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-title">電路工程價格</h2>
+    <table class="price-table">
+        <thead>
+            <tr><th>項目</th><th>參考價格</th><th>說明</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>全屋抽換電線</td><td>$2,500 - $3,500 /坪</td><td>依現場坪數計算 [cite: 31]</td></tr>
+            <tr><td>配電箱加大更換</td><td>$15,000 - $25,000</td><td>含電路整理 [cite: 30]</td></tr>
+            <tr><td>110V 電路安裝</td><td>$2,500 - $3,000 /迴</td><td>新設迴路 [cite: 32]</td></tr>
+            <tr><td>220V 電路安裝</td><td>$3,500 - $5,000 /迴</td><td>冷氣、廚電專用 [cite: 33]</td></tr>
+            <tr><td>插座開關面板更換</td><td>$800 - $1,500 /個</td><td>單個更換參考價 [cite: 39]</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-title">衛浴與燈具安裝</h2>
+    <table class="price-table">
+        <thead>
+            <tr><th>項目</th><th>參考價格</th><th>說明</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>燈具安裝</td><td>$500 - $2,500 /盞</td><td>含開孔及基本安裝 [cite: 18]</td></tr>
+            <tr><td>馬桶安裝 (代工)</td><td>$2,000 - $6,000</td><td>不含本體費用 [cite: 25]</td></tr>
+            <tr><td>臉盆 / 浴櫃安裝</td><td>$2,500 - $3,500</td><td>單組安裝參考 [cite: 20]</td></tr>
+        </tbody>
+    </table>
+
+    <div class="footer-note">
+        <p><strong>注意事項：</strong></p>
+        <ul>
+            <li>以上價格均為參考行情，實際報價以<strong>林老闆親自到府規劃</strong>之正式報價單為準。</li>
+            <li>大型工程（如全屋配線、舊宅翻修）提供免費現場勘查與規劃建議。</li>
+            <li>所有施工作業均符合國家乙級配線、丙級室內配管專業證照標準。</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
