@@ -1,51 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
   <url>
     <loc>https://deeflee.github.io/Guangyu/</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
     
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/11.webp</image:loc><image:title>廣禹工程店面外觀</image:title></image:image>
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/12.webp</image:loc><image:title>專業配電箱整線</image:title></image:image>
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/1.webp</image:loc><image:title>廣禹工程實績 1</image:title></image:image>
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/2.webp</image:loc><image:title>廣禹工程實績 2</image:title></image:image>
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/3.webp</image:loc><image:title>廣禹工程實績 3</image:title></image:image>
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/4.webp</image:loc><image:title>廣禹工程實績 4</image:title></image:image>
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/5.webp</image:loc><image:title>廣禹工程實績 5</image:title></image:image>
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/6.webp</image:loc><image:title>廣禹工程實績 6</image:title></image:image>
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/7.webp</image:loc><image:title>廣禹工程實績 7</image:title></image:image>
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/8.webp</image:loc><image:title>廣禹工程實績 8</image:title></image:image>
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/9.webp</image:loc><image:title>廣禹工程實績 9</image:title></image:image>
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/10.webp</image:loc><image:title>廣禹工程實績 10</image:title></image:image>
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/13.png</image:loc><image:title>廣禹工程實績 13</image:title></image:image>
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/1-1.webp</image:loc><image:title>廣禹工程實績 1-1</image:title></image:image>
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/1-2.webp</image:loc><image:title>廣禹工程實績 1-2</image:title></image:image>
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/1-3.webp</image:loc><image:title>廣禹工程實績 1-3</image:title></image:image>
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/1-4.webp</image:loc><image:title>廣禹工程實績 1-4</image:title></image:image>
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/1-5.webp</image:loc><image:title>廣禹工程實績 1-5</image:title></image:image>
-    <image:image><image:loc>https://deeflee.github.io/Guangyu/1-88.webp</image:loc><image:title>廣禹工程實績 1-88</image:title></image:image>
+    <image:image>
+      <image:loc>https://deeflee.github.io/Guangyu/taichung-electrician-hero.webp</image:loc>
+      <image:title>台中水電推薦廣禹工程24小時急修主圖</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://deeflee.github.io/Guangyu/taichung-commercial-electricity.webp</image:loc>
+      <image:title>廣禹工程連鎖餐飲店面配電實績</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://deeflee.github.io/Guangyu/taichung-electrician-panel.webp</image:loc>
+      <image:title>專業配電箱整線與更換無熔絲開關</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://deeflee.github.io/Guangyu/taichung-cctv-installation.webp</image:loc>
+      <image:title>台中監視器安裝與弱電佈線規劃</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://deeflee.github.io/Guangyu/taichung-kitchen-power-circuit.webp</image:loc>
+      <image:title>商業廚房高功率設備專用迴路電力規劃</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://deeflee.github.io/Guangyu/taichung-led-lighting-install.webp</image:loc>
+      <image:title>樓梯間自動感應照明燈具安裝</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://deeflee.github.io/Guangyu/taichung-wire-molding-decor.webp</image:loc>
+      <image:title>室內明線壓條細緻美化施工</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://deeflee.github.io/Guangyu/taichung-home-outlet-extension.webp</image:loc>
+      <image:title>居家安全合格材料插座增設更換</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://deeflee.github.io/Guangyu/taichung-indoor-lighting-design.webp</image:loc>
+      <image:title>室內裝潢間接照明柔和光源配置</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://deeflee.github.io/Guangyu/taichung-electrician-license-b.webp</image:loc>
+      <image:title>廣禹工程國家室內配線乙級技術士證照</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://deeflee.github.io/Guangyu/taichung-electricity-inspection.webp</image:loc>
+      <image:title>用電設備檢驗丙級技術士證照</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://deeflee.github.io/Guangyu/taichung-water-heater-license.webp</image:loc>
+      <image:title>特定瓦斯器具裝修國家級專業證照</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://deeflee.github.io/Guangyu/taichung-plumbing-license.webp</image:loc>
+      <image:title>自來水管配管丙級技術士證照</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://deeflee.github.io/Guangyu/water-heater-repair.html</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://deeflee.github.io/Guangyu/cctv-installation.html</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://deeflee.github.io/Guangyu/price-detail.html</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://deeflee.github.io/Guangyu/renovation.html</loc>
-    <lastmod>2026-03-20</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://deeflee.github.io/Guangyu/emergency.html</loc>
-    <lastmod>2026-03-20</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://deeflee.github.io/Guangyu/factory.html</loc>
-    <lastmod>2026-03-20</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
   </url>
+
 </urlset>
