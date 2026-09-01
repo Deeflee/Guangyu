@@ -18,9 +18,28 @@
     <meta name="description" content="最新台中水電維修工程詳細價目參考表。廣禹工程提供大雅、西屯、南區居家水電維修、冷氣熱水器更換、專業弱電佈線與監視器安裝透明收費。堅持施工前現場評估報價，絕不事後亂加價。">
     <meta name="keywords" content="台中水電維修費用, 台中水電報價, 水電維修價格表, 熱水器安裝費用, 台中監視器安裝價格, 大雅水電維修, 西屯水電工程, 廣禹工程價目表">
     
-    <link rel="canonical" href="https://deeflee.github.io/Guangyu/price-detail.html">
-    <link rel="alternate" hreflang="zh-TW" href="https://deeflee.github.io/Guangyu/price-detail.html">
-    <link rel="alternate" hreflang="x-default" href="https://deeflee.github.io/Guangyu/price-detail.html">
+    <!-- 修正：將 Canonical 與 hreflang 指向廣禹工程正式網域 guangyu.tw -->
+    <link rel="canonical" href="https://guangyu.tw/price-detail.html">
+    <link rel="alternate" hreflang="zh-TW" href="https://guangyu.tw/price-detail.html">
+    <link rel="alternate" hreflang="x-default" href="https://guangyu.tw/price-detail.html">
+
+    <!-- 新增：JSON-LD 商家結構化資料，加速 Google 建立索引與理解實體服務區域 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "廣禹工程",
+      "url": "https://guangyu.tw/",
+      "logo": "https://guangyu.tw/favicon.ico",
+      "description": "台中大雅、西屯、南區專業居家水電維修、弱電佈線、監視器安裝與熱水器更換服務。",
+      "areaServed": [
+        "台中市大雅區",
+        "台中市西屯區",
+        "台中市南區"
+      ],
+      "priceRange": "NT$500 - NT$90,000"
+    }
+    </script>
 
     <style>
         :root {
@@ -76,6 +95,20 @@
         .back-btn:hover {
             background: var(--gold);
             color: #000;
+        }
+
+        .intro-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px 25px;
+            margin-bottom: 30px;
+        }
+
+        .intro-box h2 {
+            color: var(--gold-light);
+            font-size: 1.2rem;
+            margin-top: 0;
         }
 
         .section-title {
@@ -169,6 +202,13 @@
         <h1>詳細工程價目參考表</h1>
         <p style="color: var(--text-muted); font-weight: bold;">廣禹工程承諾：現場評估，透明報價，絕不事後加價（大雅、西屯、南區全區服務）</p>
     </header>
+
+    <!-- 新增：內容補充區塊，提升搜尋引擎判定之品質權重 -->
+    <section class="intro-box">
+        <h2>廣禹工程－透明收費與施工保障說明</h2>
+        <p>我們理解尋找水電維修時對價格不透明的顧慮。廣禹工程具備國家級專業技術證照（室內配線乙級技術士、特定瓦斯器具裝修技術士），專為台中地區（大雅、西屯、南區）提供標準化的居家水電維修、弱電網路佈線與監視器規劃區域服務。</p>
+        <p>本頁面收錄之價格為常見單項維修與施工參考行情，實際費用將依現場走線距離、環境難易度及選用耗材規格而定。所有工程開工前皆由師傅現場評估並提供正式報價單，簽約後施工，全程堅守無隱藏收費承諾。</p>
+    </section>
 
     <h2 class="section-title">基本出勤費</h2>
     <table class="price-table">
