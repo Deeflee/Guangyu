@@ -42,7 +42,7 @@
     .border-gold { border-color: #D4AF37; }
     .emergency-pulse { animation: pulse 2s infinite; }
     @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
-    body { background-color: #0F0F0F; color: #E0E0E0; font-family: "Microsoft JhengHei", sans-serif; scroll-behavior: smooth; }
+    body { background-color: #0F0F0F; color: #E0E0E0; font-family: "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, sans-serif; scroll-behavior: smooth; }
   </style>
 
   <script type="application/ld+json">
@@ -95,16 +95,17 @@
     <div class="text-2xl font-black tracking-widest text-gold">台中水電工程網</div>
     <div class="text-xs text-gray-400">台中在地水電整合服務 | 水電修繕、弱電工程、智慧監控</div>
   </div>
-  <a href="#quote-section" title="線上預約諮詢" class="bg-[#D4AF37] text-black px-4 py-2 rounded-full font-bold hover:scale-105 transition">
-    ⚡ 線上預約諮詢
+  <a href="#instant-quote" title="線上預約試算" class="bg-[#D4AF37] text-black px-4 py-2 rounded-full font-bold hover:scale-105 transition text-sm md:text-base">
+    ⚡ 10秒線上試算
   </a>
 </nav>
 
 <main>
+  <!-- 主視覺 Banner -->
   <section class="relative py-20 md:py-32 px-6 flex items-center justify-center text-center overflow-hidden" 
            style="background-image: linear-gradient(rgba(15, 15, 15, 0.75), rgba(15, 15, 15, 0.75)), url('111.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <div class="relative z-10 max-w-4xl mx-auto mt-6">
-      <p class="text-gold text-sm md:text-lg tracking-[0.3em] mb-4 font-bold uppercase">台中水電修繕 · 專業跳電漏水查修 · 專業持證團隊親自到府</p>
+      <p class="text-gold text-sm md:text-lg tracking-[0.3em] mb-4 font-bold uppercase">台中水電修繕 · 專業跳電漏水查修 · 持證技師團隊現場評估</p>
       
       <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight drop-shadow-2xl">
         台中 <span class="text-gold">水電修繕</span> <br> 家庭水電工程與線路安全檢測
@@ -114,17 +115,76 @@
         解決跳電查修、水管漏水、老屋翻修配線等各類問題。堅持施工前透明報價，確認同意後再動工。<br>
         <span class="text-gold font-bold">服務區域：大雅、神岡、潭子、北屯、西屯、南屯、豐原、南區等台中全區</span>
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" id="quote-section">
-        <a href="#price-table" title="查看工程行情價目" class="w-full sm:w-auto gold-gradient text-black px-8 py-4 rounded font-black text-lg shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:scale-105 transition">
-          📋 查看透明工程報價
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="#instant-quote" title="立即線上預算試算" class="w-full sm:w-auto gold-gradient text-black px-8 py-4 rounded font-black text-lg shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:scale-105 transition">
+          ⚡ 10秒線上預算試算
         </a>
-        <a href="https://line.me/R/ti/p/YOUR_LINE_ID" target="_blank" rel="noopener noreferrer" title="加入LINE線上報價諮詢" onclick="gtag('event', 'click_line', {'event_category': 'contact', 'event_label': 'hero_line_button'});" class="w-full sm:w-auto bg-[#00B900] text-white px-8 py-4 rounded font-black text-lg hover:scale-105 transition shadow-lg flex items-center justify-center gap-2">
-          💬 LINE 線上傳圖估價
+        <a href="#price-table" title="查看工程行情價目" class="w-full sm:w-auto bg-[#1A1A1A] border border-gray-700 text-gray-200 px-8 py-4 rounded font-bold text-lg hover:border-gold hover:text-gold transition">
+          📋 參考市場行情表
         </a>
       </div>
     </div>
   </section>
 
+  <!-- 互動式工程預算快速試算器 -->
+  <section id="instant-quote" class="py-16 px-6 bg-[#141414] border-b border-gray-800 scroll-mt-20">
+    <div class="max-w-3xl mx-auto bg-black p-6 md:p-10 rounded-2xl border border-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.15)]">
+      <div class="text-center mb-8">
+        <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">透明估價 · 預算不踩雷</span>
+        <h2 class="text-2xl md:text-3xl font-black text-white mt-1">台中水電弱電工程 費用行情試算</h2>
+        <p class="text-gray-400 text-sm mt-2">選擇需求與施作規模，系統自動依台中在地行情精算合理的預算區間</p>
+      </div>
+
+      <form id="quoteForm" onsubmit="return false;" class="space-y-6">
+        <div>
+          <label for="serviceType" class="block text-sm font-bold text-gray-200 mb-2">1. 選擇主要工程項目</label>
+          <select id="serviceType" class="w-full bg-[#1F1F1F] border border-gray-700 text-white rounded-lg p-3 focus:border-[#D4AF37] focus:outline-none transition">
+            <option value="rewiring">老屋全室電線抽換（含基本配電盤整線）</option>
+            <option value="cctv">數位監視器系統架設（含拉線與遠端設定）</option>
+            <option value="plumbing">冷熱給排水管全室重新配置</option>
+            <option value="outlets">新增高功率專用迴路 / 插座開關面板增設</option>
+          </select>
+        </div>
+
+        <div>
+          <label id="quantityLabel" for="quantity" class="block text-sm font-bold text-gray-200 mb-2">2. 施作坪數（坪）</label>
+          <input type="number" id="quantity" min="1" max="500" value="25" class="w-full bg-[#1F1F1F] border border-gray-700 text-white rounded-lg p-3 focus:border-[#D4AF37] focus:outline-none transition">
+        </div>
+
+        <div>
+          <label class="block text-sm font-bold text-gray-200 mb-2">3. 施作現場類型</label>
+          <div class="grid grid-cols-3 gap-3">
+            <label class="cursor-pointer">
+              <input type="radio" name="buildingType" value="1" checked class="peer sr-only">
+              <div class="p-3 text-center rounded-lg border border-gray-700 peer-checked:border-[#D4AF37] peer-checked:bg-[#222] peer-checked:text-[#D4AF37] text-gray-400 text-sm font-bold transition">電梯大樓</div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="buildingType" value="1.1" class="peer sr-only">
+              <div class="p-3 text-center rounded-lg border border-gray-700 peer-checked:border-[#D4AF37] peer-checked:bg-[#222] peer-checked:text-[#D4AF37] text-gray-400 text-sm font-bold transition">公寓透天</div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="buildingType" value="1.15" class="peer sr-only">
+              <div class="p-3 text-center rounded-lg border border-gray-700 peer-checked:border-[#D4AF37] peer-checked:bg-[#222] peer-checked:text-[#D4AF37] text-gray-400 text-sm font-bold transition">店面商辦</div>
+            </label>
+          </div>
+        </div>
+      </form>
+
+      <div class="mt-8 p-6 bg-[#181818] rounded-xl border border-gray-800 text-center">
+        <div class="text-xs text-gray-400">市場行情試算區間（預估單號：<span id="quoteId" class="text-[#D4AF37] font-mono font-bold tracking-wider">--</span>）</div>
+        <div class="text-3xl md:text-4xl font-black text-[#D4AF37] my-3">
+          NT$ <span id="priceRange">計算中...</span>
+        </div>
+        <p class="text-xs text-gray-400 mb-6">※ 實際費用取決於現場管線路徑、牆面材質及用電負載，此試算僅供初步預算編列參考，最終施作明細以技師現場實勘為準。</p>
+
+        <a id="lineEstimateBtn" href="#" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click_line', {'event_category': 'contact', 'event_label': 'calculator_line_button'});" class="inline-flex items-center justify-center gap-2 w-full bg-[#00B900] hover:bg-[#009900] text-white py-4 px-6 rounded-lg font-bold text-lg transition shadow-lg">
+          💬 帶入單號加 LINE，預約專業現場勘查
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 專業水電與弱電修繕服務 -->
   <section class="py-12 px-6 bg-[#111] border-b border-gray-800">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-2xl md:text-3xl font-bold text-gold mb-8">⚡ 專業水電與弱電修繕服務</h2>
@@ -158,6 +218,7 @@
     </div>
   </section>
 
+  <!-- 台中分區服務說明 -->
   <section class="py-16 px-6 bg-[#0A0A0A] border-b border-gray-800">
     <div class="max-w-5xl mx-auto">
       <h2 class="text-2xl md:text-3xl font-bold text-center text-gold mb-12">📍 台中分區在地水電維修服務</h2>
@@ -185,6 +246,7 @@
     </div>
   </section>
 
+  <!-- 專業工程服務範疇（純文字規格卡片） -->
   <section class="py-16 px-6 bg-[#151515]">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-12">
@@ -216,6 +278,7 @@
     </div>
   </section>
 
+  <!-- 強弱電整合能力 -->
   <section class="py-16 px-6 bg-[#0F0F0F]">
     <div class="max-w-6xl mx-auto">
       <div class="flex flex-col md:flex-row items-end justify-between mb-8 border-b border-gray-800 pb-4">
@@ -243,6 +306,7 @@
     </div>
   </section>
 
+  <!-- 施工實績 -->
   <section class="py-16 px-6 bg-[#141414]">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold text-gold mb-10 text-center">💡 水電施工與空間配置實績</h2>
@@ -275,7 +339,8 @@
     </div>
   </section>
 
-  <section id="price-table" class="py-16 px-6 bg-[#0F0F0F] relative">
+  <!-- 參考行情價目表 -->
+  <section id="price-table" class="py-16 px-6 bg-[#0F0F0F] relative scroll-mt-20">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-3xl font-bold text-center mb-4 text-gold">台中水電與弱電監視器參考行情，安心修繕</h2>
       <p class="text-gray-400 text-center mb-10">施工前先至現場勘查評估並提供明細報價，經客戶確認同意後才動工，絕不無故加價。</p>
@@ -329,6 +394,7 @@
     </div>
   </section>
 
+  <!-- 安心承諾 -->
   <section class="py-12 px-6 bg-[#151515]">
     <div class="max-w-5xl mx-auto bg-[#222] rounded-2xl p-8 border-l-8 border-gold">
       <h3 class="text-2xl font-bold text-white mb-6">💡 專業工程團隊的 5 大安心承諾</h3>
@@ -346,6 +412,7 @@
     </div>
   </section>
 
+  <!-- 常見問答 Q&A -->
   <section class="py-16 px-6 bg-[#0F0F0F]">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-3xl font-bold text-center text-gold mb-10">🤔 台中水電維修與弱電工程常見問題 Q&A</h2>
@@ -382,21 +449,103 @@
     </div>
   </section>
 
+  <!-- 服務範圍地圖 -->
   <section class="w-full h-96 bg-[#1A1A1A] border-t border-gray-800">
     <iframe src="https://maps.google.com/maps?q=%E5%8F%B0%E4%B8%AD%E5%B8%82&t=&z=12&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="台中市服務範圍地圖"></iframe>
   </section>
 </main>
 
+<!-- 手機版底部常駐工具列 -->
 <div class="fixed bottom-0 left-0 right-0 grid grid-cols-2 h-16 z-50 md:hidden">
-  <a href="#price-table" title="查看工程行情" class="bg-amber-600 flex items-center justify-center font-bold text-white text-lg">📋 參考報價</a>
+  <a href="#instant-quote" title="線上試算" class="bg-[#D4AF37] flex items-center justify-center font-bold text-black text-lg">⚡ 線上試算</a>
+  <!-- 請將 YOUR_LINE_ID 替換為專屬 LINE 帳號 ID 或加好友連結 -->
   <a href="https://line.me/R/ti/p/YOUR_LINE_ID" target="_blank" title="加入官方LINE諮詢" aria-label="加入官方LINE進行諮詢" onclick="gtag('event', 'click_line', {'event_category': 'contact', 'event_label': 'sticky_bottom_line'});" rel="noopener noreferrer" class="bg-[#00B900] flex items-center justify-center font-bold text-white text-lg">💬 LINE 諮詢</a>
 </div>
 
+<!-- 頁尾宣告 -->
 <footer class="py-12 text-center border-t border-gray-800 bg-[#0A0A0A] text-gray-400 pb-24 md:pb-12">
   <p class="text-2xl font-bold text-gold mb-2">台中水電弱電工程網</p>
   <p class="mb-4 text-sm">服務區域：台中市全區（大雅、西屯、北屯、南屯、南區、豐原、潭子等各區預約派遣）</p>
   <p class="text-xs text-gray-600">© 2026 台中水電弱電工程團隊 版權所有 | 專業水電修繕、弱電工程施工、遠端監視器安裝，報價公開透明安心選</p>
 </footer>
+
+<!-- 預算試算器連動邏輯腳本 -->
+<script>
+  // 基礎行情配置表
+  const PRICING_RULES = {
+    rewiring: { name: "老屋全室電線抽換", unit: "施作坪數（坪）", minUnit: 2500, maxUnit: 3500, defaultQty: 25 },
+    cctv: { name: "數位監視器安裝", unit: "鏡頭支數（支）", minUnit: 2600, maxUnit: 3500, defaultQty: 4 },
+    plumbing: { name: "給排水管重新配置", unit: "施作坪數（坪）", minUnit: 1800, maxUnit: 2600, defaultQty: 20 },
+    outlets: { name: "專用迴路/插座增設", unit: "新增組數（組）", minUnit: 1200, maxUnit: 1800, defaultQty: 5 }
+  };
+
+  // 生成固定隨機單號（加入 try...catch 容錯，防止私密瀏覽模式崩潰）
+  let currentQuoteId = "TW" + Math.floor(1000 + Math.random() * 9000);
+  try {
+    const savedId = sessionStorage.getItem("current_quote_id");
+    if (savedId) {
+      currentQuoteId = savedId;
+    } else {
+      sessionStorage.setItem("current_quote_id", currentQuoteId);
+    }
+  } catch (e) {
+    // 隱私模式阻擋時降級使用記憶體變數，不中斷後續腳本
+  }
+  document.getElementById("quoteId").innerText = currentQuoteId;
+
+  // 取得 DOM 節點
+  const serviceSelect = document.getElementById("serviceType");
+  const qtyInput = document.getElementById("quantity");
+  const qtyLabel = document.getElementById("quantityLabel");
+  const priceDisplay = document.getElementById("priceRange");
+  const lineBtn = document.getElementById("lineEstimateBtn");
+
+  function calculateQuote() {
+    const serviceKey = serviceSelect.value;
+    const rule = PRICING_RULES[serviceKey];
+    let qty = parseFloat(qtyInput.value);
+    
+    // 防止非數字或小於等於 0
+    if (isNaN(qty) || qty <= 0) {
+      qty = 1;
+    }
+    
+    // 取得建物類型權重係數
+    const selectedRadio = document.querySelector('input[name="buildingType"]:checked');
+    const buildingRate = selectedRadio ? parseFloat(selectedRadio.value) : 1.0;
+
+    // 計算價格區間（以百元為單位進位取整）
+    const minPrice = Math.round((qty * rule.minUnit * buildingRate) / 100) * 100;
+    const maxPrice = Math.round((qty * rule.maxUnit * buildingRate) / 100) * 100;
+
+    // 更新畫面顯示
+    priceDisplay.innerText = `${minPrice.toLocaleString()} ~ ${maxPrice.toLocaleString()}`;
+
+    // 動態組成 LINE 轉跳帶入字串
+    // 請將 YOUR_LINE_ID 替換為專屬 LINE 帳號 ID 或加好友連結
+    const lineBaseUrl = "https://line.me/R/ti/p/YOUR_LINE_ID";
+    const textMsg = `你好，我剛在網站完成線上預算試算！\n預估單號：【${currentQuoteId}】\n施作項目：${rule.name}\n預估數量：${qty} (${rule.unit})\n系統預估行情：$${minPrice.toLocaleString()} ~ $${maxPrice.toLocaleString()}\n我想進一步預約專人現場實勘。`;
+    
+    lineBtn.href = `${lineBaseUrl}?text=${encodeURIComponent(textMsg)}`;
+  }
+
+  // 項目切換連動更新數量單位與預設值
+  serviceSelect.addEventListener("change", () => {
+    const selected = PRICING_RULES[serviceSelect.value];
+    qtyLabel.innerText = `2. ${selected.unit}`;
+    qtyInput.value = selected.defaultQty;
+    calculateQuote();
+  });
+
+  // 監聽數值改變即時重算
+  qtyInput.addEventListener("input", calculateQuote);
+  document.querySelectorAll('input[name="buildingType"]').forEach(radio => {
+    radio.addEventListener("change", calculateQuote);
+  });
+
+  // 初始化執行第一次計算
+  calculateQuote();
+</script>
 
 </body>
 </html>
