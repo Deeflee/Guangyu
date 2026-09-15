@@ -140,9 +140,9 @@
           <label for="serviceType" class="block text-sm font-bold text-gray-200 mb-2">1. 選擇主要工程項目</label>
           <select id="serviceType" class="w-full bg-[#1F1F1F] border border-gray-700 text-white rounded-lg p-3 focus:border-[#D4AF37] focus:outline-none transition">
             <option value="rewiring">老屋全室電線抽換（含基本配電盤整線）</option>
-            <option value="cctv">數位監視器系統架設（含拉線與遠端設定）</option>
+            <option value="cctv">數位監視器系統架設（含錄影主機與遠端設定）</option>
             <option value="plumbing">冷熱給排水管全室重新配置</option>
-            <option value="outlets">新增高功率專用迴路 / 插座開關面板增設</option>
+            <option value="outlets">高功率專用迴路配置（冷氣/廚房/電熱水器）</option>
           </select>
         </div>
 
@@ -177,7 +177,8 @@
         </div>
         <p class="text-xs text-gray-400 mb-6">※ 實際費用取決於現場管線路徑、牆面材質及用電負載，此試算僅供初步預算編列參考，最終施作明細以技師現場實勘為準。</p>
 
-        <a id="lineEstimateBtn" href="#" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click_line', {'event_category': 'contact', 'event_label': 'calculator_line_button'});" class="inline-flex items-center justify-center gap-2 w-full bg-[#00B900] hover:bg-[#009900] text-white py-4 px-6 rounded-lg font-bold text-lg transition shadow-lg">
+        <!-- 請將 YOUR_LINE_ID 替換為您的 LINE ID 或專屬加好友連結 -->
+        <a id="lineEstimateBtn" href="https://line.me/R/ti/p/YOUR_LINE_ID" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click_line', {'event_category': 'contact', 'event_label': 'calculator_line_button'});" class="inline-flex items-center justify-center gap-2 w-full bg-[#00B900] hover:bg-[#009900] text-white py-4 px-6 rounded-lg font-bold text-lg transition shadow-lg">
           💬 帶入單號加 LINE，預約專業現場勘查
         </a>
       </div>
@@ -469,17 +470,60 @@
   <p class="text-xs text-gray-600">© 2026 台中水電弱電工程團隊 版權所有 | 專業水電修繕、弱電工程施工、遠端監視器安裝，報價公開透明安心選</p>
 </footer>
 
-<!-- 預算試算器連動邏輯腳本 -->
+<!-- 預算試算器連動邏輯腳本（水電實務行情修正版） -->
 <script>
-  // 基礎行情配置表
+  // 水電與弱電實務行情配置表（含基本底價、遞增單價與最低門檻）
   const PRICING_RULES = {
-    rewiring: { name: "老屋全室電線抽換", unit: "施作坪數（坪）", minUnit: 2500, maxUnit: 3500, defaultQty: 25 },
-    cctv: { name: "數位監視器安裝", unit: "鏡頭支數（支）", minUnit: 2600, maxUnit: 3500, defaultQty: 4 },
-    plumbing: { name: "給排水管重新配置", unit: "施作坪數（坪）", minUnit: 1800, maxUnit: 2600, defaultQty: 20 },
-    outlets: { name: "專用迴路/插座增設", unit: "新增組數（組）", minUnit: 1200, maxUnit: 1800, defaultQty: 5 }
+    // 1. 高功率專用迴路（冷氣/廚房/電熱水器獨立專用迴路，含配電箱無熔絲開關與穿線）
+    outlets: { 
+      name: "高功率專用迴路配置", 
+      unit: "施作迴路（迴）", 
+      baseMin: 3800,  // 第1迴含工料基本價
+      baseMax: 5200, 
+      stepMin: 2800,  // 第2迴起每迴遞增
+      stepMax: 3800, 
+      minFloor: 3800, // 最低低消
+      defaultQty: 1 
+    },
+    // 2. 老屋全室電線抽換（採用國家安規耐燃純銅線，含總配電盤整理）
+    rewiring: { 
+      name: "老屋全室電線抽換", 
+      unit: "施作坪數（坪）", 
+      baseMin: 45000, // 基本進場低消（含總配電盤升級工料）
+      baseMax: 55000, 
+      stepMin: 2600,  // 超過基本坪數後每坪單價
+      stepMax: 3600, 
+      minFloor: 45000,
+      baseQty: 15,    // 底價涵蓋的基本坪數
+      defaultQty: 25 
+    },
+    // 3. 數位智慧監視系統（含數位錄影主機、監控專用硬碟、佈線與手機遠端設定）
+    cctv: { 
+      name: "數位監視系統安裝", 
+      unit: "鏡頭數量（支）", 
+      baseMin: 12500, // 含4路主機 + 1TB/2TB硬碟 + 基本電源與設定
+      baseMax: 15500, 
+      stepMin: 2800,  // 超過2支後每支鏡頭佈線安裝
+      stepMax: 3600, 
+      minFloor: 12500,
+      baseQty: 2,     // 底價涵蓋前2支鏡頭
+      defaultQty: 4 
+    },
+    // 4. 全室冷熱給排水管配置（不鏽鋼/南亞PVC管線全面重拉）
+    plumbing: { 
+      name: "給排水管重新配置", 
+      unit: "施作坪數（坪）", 
+      baseMin: 35000, // 基本進場衛浴配管底價
+      baseMax: 48000, 
+      stepMin: 1800, 
+      stepMax: 2600, 
+      minFloor: 35000,
+      baseQty: 15,
+      defaultQty: 20 
+    }
   };
 
-  // 生成固定隨機單號（加入 try...catch 容錯，防止私密瀏覽模式崩潰）
+  // 生成固定隨機單號（加入 try...catch 容錯，防止私密瀏覽崩潰）
   let currentQuoteId = "TW" + Math.floor(1000 + Math.random() * 9000);
   try {
     const savedId = sessionStorage.getItem("current_quote_id");
@@ -488,9 +532,7 @@
     } else {
       sessionStorage.setItem("current_quote_id", currentQuoteId);
     }
-  } catch (e) {
-    // 隱私模式阻擋時降級使用記憶體變數，不中斷後續腳本
-  }
+  } catch (e) {}
   document.getElementById("quoteId").innerText = currentQuoteId;
 
   // 取得 DOM 節點
@@ -505,31 +547,50 @@
     const rule = PRICING_RULES[serviceKey];
     let qty = parseFloat(qtyInput.value);
     
-    // 防止非數字或小於等於 0
+    // 防呆處理
     if (isNaN(qty) || qty <= 0) {
       qty = 1;
     }
     
-    // 取得建物類型權重係數
+    // 建物難易度加權
     const selectedRadio = document.querySelector('input[name="buildingType"]:checked');
     const buildingRate = selectedRadio ? parseFloat(selectedRadio.value) : 1.0;
 
-    // 計算價格區間（以百元為單位進位取整）
-    const minPrice = Math.round((qty * rule.minUnit * buildingRate) / 100) * 100;
-    const maxPrice = Math.round((qty * rule.maxUnit * buildingRate) / 100) * 100;
+    let calcMin = 0;
+    let calcMax = 0;
 
-    // 更新畫面顯示
+    // 依項目類型執行實務階梯演算法
+    if (serviceKey === "outlets") {
+      // 專用迴路：第1迴基本價，第2迴起累加
+      calcMin = rule.baseMin + (qty - 1) * rule.stepMin;
+      calcMax = rule.baseMax + (qty - 1) * rule.stepMax;
+    } else if (serviceKey === "cctv" || serviceKey === "rewiring" || serviceKey === "plumbing") {
+      // 包含主機/總盤低消的工程
+      if (qty <= rule.baseQty) {
+        calcMin = rule.baseMin;
+        calcMax = rule.baseMax;
+      } else {
+        calcMin = rule.baseMin + (qty - rule.baseQty) * rule.stepMin;
+        calcMax = rule.baseMax + (qty - rule.baseQty) * rule.stepMax;
+      }
+    }
+
+    // 乘以建物係數並設低消底限
+    let minPrice = Math.max(rule.minFloor, Math.round((calcMin * buildingRate) / 100) * 100);
+    let maxPrice = Math.max(rule.minFloor, Math.round((calcMax * buildingRate) / 100) * 100);
+
+    // 畫面更新
     priceDisplay.innerText = `${minPrice.toLocaleString()} ~ ${maxPrice.toLocaleString()}`;
 
-    // 動態組成 LINE 轉跳帶入字串
+    // 組成 LINE 轉跳帶入字串
     // 請將 YOUR_LINE_ID 替換為專屬 LINE 帳號 ID 或加好友連結
     const lineBaseUrl = "https://line.me/R/ti/p/YOUR_LINE_ID";
-    const textMsg = `你好，我剛在網站完成線上預算試算！\n預估單號：【${currentQuoteId}】\n施作項目：${rule.name}\n預估數量：${qty} (${rule.unit})\n系統預估行情：$${minPrice.toLocaleString()} ~ $${maxPrice.toLocaleString()}\n我想進一步預約專人現場實勘。`;
+    const textMsg = `你好，我剛在網站完成線上預算試算！\n預估單號：【${currentQuoteId}】\n施作項目：${rule.name}\n預估數量：${qty} (${rule.unit})\n系統預估行情：$${minPrice.toLocaleString()} ~ $${maxPrice.toLocaleString()}\n我想預約師傅現場勘查評估。`;
     
     lineBtn.href = `${lineBaseUrl}?text=${encodeURIComponent(textMsg)}`;
   }
 
-  // 項目切換連動更新數量單位與預設值
+  // 下拉選單切換更新單位與預設值
   serviceSelect.addEventListener("change", () => {
     const selected = PRICING_RULES[serviceSelect.value];
     qtyLabel.innerText = `2. ${selected.unit}`;
@@ -537,13 +598,13 @@
     calculateQuote();
   });
 
-  // 監聽數值改變即時重算
+  // 監聽變更事件
   qtyInput.addEventListener("input", calculateQuote);
   document.querySelectorAll('input[name="buildingType"]').forEach(radio => {
     radio.addEventListener("change", calculateQuote);
   });
 
-  // 初始化執行第一次計算
+  // 頁面加載完成後初次計算
   calculateQuote();
 </script>
 
